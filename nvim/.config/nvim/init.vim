@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 set ruler
 set number
 set relativenumber
+set clipboard+=unnamedplus
 set incsearch
 syntax on
 au BufReadPost *.asm set syntax=asm8051
