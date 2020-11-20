@@ -47,7 +47,7 @@ URxvt*.resize-font.bigger:C-k
 
 
 URxvt.foreground:  nord4 
-URxvt.background:   mybg
+URxvt.background:  mybg
 URxvt.cursorColor:  nord4
 !URxvtfading: 35
 !URxvtfadeColor: nord3

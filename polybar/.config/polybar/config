@@ -17,8 +17,8 @@
 ;==========================================================
 [colors]
 background = ${xrdb:color0:#FFFFFF}
-;background = #1C2023
-;background-light = #252d32 
+;background = #DD1C2023
+;background-light = #DD252d32 
 background-light = ${xrdb:color16:#FFFFFF}
 ;background = #F00
 
