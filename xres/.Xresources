@@ -29,12 +29,12 @@ URxvt.perl-ext-common: resize-font
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
 URxvt.internalBorder: 24
-URxvt.font: xft:Monospace:style=Regular:size=10
-URxvt.boldFont: xft:Monospace:style=Bold:size=10
-URxvt.italicFont: xft:Monospace:style=Italic:size=10
-URxvt.boldItalicFont: xft:Monospace:style=Bold Italic:size=10
-URxvt*.resize-font.smaller:C-j
-URxvt*.resize-font.bigger:C-k
+URxvt.font: xft:Monospace:style=Regular:size=14
+URxvt.boldFont: xft:Monospace:style=Bold:size=14	
+URxvt.italicFont: xft:Monospace:style=Italic:size=14	
+URxvt.boldItalicFont: xft:Monospace:style=Bold Italic:size=14	
+URxvt.resize-font.smaller:C-minus
+URxvt.resize-font.bigger:C-plus
 
 
 ! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>

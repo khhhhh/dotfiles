@@ -67,7 +67,7 @@ font-4 = "artill clean weather icons:style=Regular:size=15;1"
 font-5 = "Material Icons:style=Regular:size=10;1"
 modules-left = i3 
 modules-center = date 
-modules-right = pulseaudio xbacklight battery xkeyboard wlan weather 
+modules-right = pulseaudio backlightctl battery xkeyboard wlan weather 
 
 tray-position = right
 tray-padding = 4
@@ -192,9 +192,28 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
+[module/backlight]
+type = internal/backlight
+
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+
+; Enable changing the backlight with the scroll wheel (unreleased)
+; NOTE: This may require additional configuration on some systems. Polybar will
+; write to `/sys/class/backlight/${self.card}/brightness` which requires polybar
+; to have write access to that file.
+; DO NOT RUN POLYBAR AS ROOT. 
+; The recommended way is to add the user to the
+; `video` group and give that group write-privileges for the `brightness` file.
+; See the ArchWiki for more information:
+; https://wiki.archlinux.org/index.php/Backlight#ACPI
+; Default: false
+enable-scroll = true
+
 [module/xbacklight]
 type = internal/xbacklight
 
+card = intel_backlight
 format = <label> 
 label = %percentage%%
 
@@ -209,10 +228,12 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
+enable-scroll = true
+
 [module/backlight-acpi]
 inherit = module/xbacklight
-type = internal/backlight
 card = intel_backlight
+type = internal/backlight
 
 [module/cpu]
 type = internal/cpu
@@ -272,10 +293,10 @@ type = internal/date
 interval = 1
 
 date = "%A, %d.%m"
-date-alt = "%A,%d.%m"
+;date-alt = "%A, %d.%m"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %H:%M:%S
+;time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -419,6 +440,14 @@ interval = 600
 cursor-click = python3 ~/.config/weather/weather.py
 exec = python3 ~/.config/weather/weather.py
 
+[module/backlightctl]
+type = custom/script
+
+exec=~/.config/polybar/backlight.sh
+interval=0
+tail=true
+scroll-up = ~/.config/polybar/backlight.sh increase
+scroll-down = ~/.config/polybar/backlight.sh decrease
 
 [settings]
 screenchange-reload = true

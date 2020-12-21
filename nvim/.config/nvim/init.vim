@@ -12,7 +12,8 @@ vnoremap <C-x> "+x
 
 
 " CPP SETTINGS
-autocmd filetype cpp noremap <F5> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r') <CR> 
+autocmd filetype cpp noremap <F5> :w <bar> exec '!g++ '.shellescape('%') <CR> 
+"autocmd filetype cpp noremap <F5> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r') <CR> 
 
 
 " ASM EMULATOR DSM-51 SETTINGS
@@ -21,6 +22,10 @@ autocmd filetype asm noremap <F12> :w <bar> exec '!wine ~/.config/.SW/DSM-51_Any
 
 autocmd filetype asm noremap <F9> :w <bar> exec '!asem '.shellescape('%') <CR>
 autocmd filetype asm noremap <F11> :w <bar> exec '!s51 '.shellescape('%:r').'.hex' <CR>
+
+" C SDCC
+autocmd filetype c noremap <F9> :w <bar> exec '!sdcc '.shellescape('%') <CR> 
+autocmd filetype c noremap <F12> :w <bar> exec '!wine ~/.config/.SW/DSM-51_Any_CPU.exe '.shellescape('%:r').'.ihx' <CR>
 
 " autocmd filetype tex noremap <f5> :w <bar> exec '!pdflatex '.shellescape('%').' && evince '.shellescape('%:r').'.pdf & ' <CR> 
 
@@ -42,9 +47,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'lervag/vimtex'
-
+Plugin 'itchyny/lightline.vim'
 
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
