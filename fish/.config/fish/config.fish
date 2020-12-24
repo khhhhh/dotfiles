@@ -15,6 +15,7 @@ set -Ux XDG_CONFIG_HOME $HOME/.config
 set -Ux XDG_CACHE_HOME $HOME/.cache
 set -Ux XDG_DATA_HOME $HOME/.local/share
 
+set -Ux INSTALL_UDEV_RULES 1
 set fish_greeting
 
 function fish_prompt
