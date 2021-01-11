@@ -8,7 +8,9 @@ rofi.hide-scrollbar: true
 
 !                  'background', 'border', 'separator'
 rofi.color-window: argb:c81C2023, #1C2023, #1C2023
+#rofi.color-window: #1C2023, #1C2023, #1C2023
 ! State:           'bg',    	 'fg',    	 'bgalt', 	 'hlbg',   'hlfg'
 rofi.color-normal: argb:001C2023, #c5c5c5  , argb:001C2023, argb:001C2023, #3f5f85 
+#rofi.color-normal: #1C2023, #c5c5c5  , #1C2023, #1C2023, #3f5f85 
 
 rofi.font: System San Francisco Display 18

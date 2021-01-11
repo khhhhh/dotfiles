@@ -1,4 +1,4 @@
-exec xrandr --auto
+#exec xrandr --auto
 # BACKGROUND VAR
 set $bg '/home/aleh/Pictures/Wallpapers/WP/lain1.jpg'
 
@@ -211,6 +211,8 @@ for_window [class="TelegramDesktop"] floating enable
 for_window [class="TelegramDesktop"] resize set 800 600
 for_window [class="Org.gnome.Nautilus"] floating enable
 for_window [class="Org.gnome.Nautilus"] resize set 700 600
+for_window [class="Thunar"] floating enable
+for_window [class="Thunar"] resize set 700 600
 for_window [title="Microsoft Teams Notification"] floating enable
 #for_window [class="Org.gnome.Nautilus"] floating enable
 for_window [class="PacketTracer7" title="^(?!Cisco Packet Tracer).*$"] floating enable 
@@ -234,4 +236,4 @@ exec_always setxkbmap -model pc105 -layout pl,ru -variant qwerty -option grp:win
 #exec_always setxkbmap -option caps:swapescape
 
 exec_always polybar example
-exec_always compton --config ~/.config/compton/compton.conf 
+exec_always compton --vsync opengl-swc --backend glx --config ~/.config/compton/compton.conf 
