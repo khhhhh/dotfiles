@@ -1,4 +1,4 @@
-#exec xrandr --auto
+exec xrandr --auto
 # BACKGROUND VAR
 set $bg '/home/aleh/Pictures/Wallpapers/WP/lain1.jpg'
 

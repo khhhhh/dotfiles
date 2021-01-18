@@ -28,15 +28,15 @@ URxvt.perl-ext-common: resize-font
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
 URxvt.internalBorder: 24
-URxvt.font: xft:Monospace:style=Regular:size=11
-URxvt.boldFont: xft:Monospace:style=Bold:size=11	
-URxvt.italicFont: xft:Monospace:style=Italic:size=11	
-URxvt.boldItalicFont: xft:Monospace:style=Bold Italic:size=11	
+URxvt.font: xft:Monospace:style=Regular:size=14
+URxvt.boldFont: xft:Monospace:style=Bold:size=14	
+URxvt.italicFont: xft:Monospace:style=Italic:size=14	
+URxvt.boldItalicFont: xft:Monospace:style=Bold Italic:size=14	
 !URxvt.resize-font.smaller:C-minus
 !URxvt.resize-font.bigger:C-plus
-!URxvt.keysym.C-minus:     resize-font:smaller
-!URxvt.keysym.C-plus:      resize-font:bigger
-!URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
 
 ! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
 ! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
@@ -48,7 +48,7 @@ URxvt.boldItalicFont: xft:Monospace:style=Bold Italic:size=11
 
 
 URxvt.foreground:  nord4 
-URxvt.background:  mybg
+URxvt.background: mybg 
 URxvt.cursorColor:  nord4
 !URxvtfading: 35
 !URxvtfadeColor: nord3
