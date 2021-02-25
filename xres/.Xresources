@@ -21,8 +21,8 @@ Sxiv.background:mybg
 
 
 URxvt.clipboard.autocopy: true
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
+!URxvt.keysym.M-c: perl:clipboard:copy
+!URxvt.keysym.M-v: perl:clipboard:paste
 URxvt.resize-font.step: 1
 URxvt.perl-ext-common: resize-font
 URxvt.termName: rxvt-unicode

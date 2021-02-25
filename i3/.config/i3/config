@@ -7,6 +7,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:San Francisco Display 12
 
+exec --no-startup-id blueman-tray
 exec --no-startup-id flameshot
 exec_always killall -q polybar
 exec_always killall compton
@@ -236,4 +237,4 @@ exec_always setxkbmap -model pc105 -layout pl,ru -variant qwerty -option grp:win
 #exec_always setxkbmap -option caps:swapescape
 
 exec_always polybar example
-exec_always compton --vsync opengl-swc --backend glx --config ~/.config/compton/compton.conf 
+exec_always compton --vsync opengl-swc --paint-on-overlay --config ~/.config/compton/compton.conf 

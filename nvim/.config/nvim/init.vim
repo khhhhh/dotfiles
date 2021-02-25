@@ -4,12 +4,29 @@ set number
 set relativenumber
 set clipboard+=unnamedplus
 set incsearch
+set encoding=utf-8
 syntax on
 au BufReadPost *.asm set syntax=asm8051
 vnoremap <C-c> "+y
 map <C-p> "+P
 vnoremap <C-x> "+x
 
+" Python
+" Tabs to spaces
+au BufNewFile, BufReadPost *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+" interpretator
+autocmd filetype python noremap <F5> :w <bar> exec '!python '.shellescape('%')
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
 
 " CPP SETTINGS
 autocmd filetype cpp noremap <F5> :w <bar> exec '!g++ '.shellescape('%') <CR> 
@@ -43,14 +60,16 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'lervag/vimtex'
 Plugin 'itchyny/lightline.vim'
+" Plugin 'numirias/semshi'
+Plugin 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
 call vundle#end()            " required
 filetype plugin indent on    " required
 
