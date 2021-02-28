@@ -1,9 +1,12 @@
 # Zathura configuration file
 set recolor true
-set recolor-darkcolor "#dcdccc"
-set recolor-lightcolor "#1c2023"
+set recolor-darkcolor "#ebdbb2"
+#set recolor-darkcolor "#dcdccc"
+set recolor-lightcolor "#282828"
+#set recolor-lightcolor "#1c2023"
 set smooth-scroll "true"
 set adjust-open "best-fit"
-set default-bg "#1c2023" #00
-set default-fg "#F7F7F6" #01
+set default-bg "#282828" #00
+#set default-fg "#F7F7F6" #01
+set default-fg "#ebdbb2" #01
 

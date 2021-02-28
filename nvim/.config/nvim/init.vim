@@ -4,6 +4,7 @@ set number
 set relativenumber
 set clipboard+=unnamedplus
 set incsearch
+set scrolloff=7
 set encoding=utf-8
 syntax on
 au BufReadPost *.asm set syntax=asm8051
@@ -49,37 +50,45 @@ autocmd filetype c noremap <F12> :w <bar> exec '!wine ~/.config/.SW/DSM-51_Any_C
 autocmd filetype tex noremap <f5> :w <CR> :VimtexCompile <CR>
 
 
-let g:tex_flavor = 'latex'
-let g:vimtex_quickfix_mode = 0
-let g:vimtex_view_method = 'zathura'
-let g:vimtex_view_forward_search_on_start = 0
-" VUNDLE START
+" vim-plug start
 
-filetype off                  " required
+call plug#begin(stdpath('data') . '/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+ Plug 'preservim/nerdtree'
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'tpope/vim-fugitive'
+ Plug 'git://git.wincent.com/command-t.git'
+ Plug 'lervag/vimtex'
+ " Plugin 'itchyny/lightline.vim'
+ Plug 'vim-airline/vim-airline'
+ " Plugin 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+ Plug 'morhetz/gruvbox'
+ Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'lervag/vimtex'
-Plugin 'itchyny/lightline.vim'
-" Plugin 'numirias/semshi'
-Plugin 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+call plug#end()
 
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-call vundle#end()            " required
-filetype plugin indent on    " required
+ " gruvbox colorscheme
+ let g:gruvbox_contrast_dark = 'medium'
+ colorscheme gruvbox
 
-" VUNDLE END
-
-
+" Latex
+ let g:tex_flavor = 'latex'
+ let g:vimtex_quickfix_mode = 0
+ let g:vimtex_view_method = 'zathura'
+ let g:vimtex_view_forward_search_on_start = 0
 
 " VIM-AIRLINE
-let g:airline_powerline_fonts = 1 "Включить поддержку Powerline шрифтов
-let g:airline#extensions#keymap#enabled = 0 "Не показывать текущий маппинг
-let g:airline_section_z = "\ue0a1:%l/%L Col:%c" "Кастомная графа положения курсора
-let g:Powerline_symbols='unicode' "Поддержка unicode
-let g:airline#extensions#xkblayout#enabled = 0 "Про это позже расскажу
+ let g:airline_theme='gruvbox'
+ let g:airline_powerline_fonts = 1 "Включить поддержку Powerline шрифтов
+ let g:airline#extensions#keymap#enabled = 0 "Не показывать текущий маппинг
+ let g:airline_section_z = "\ue0a1:%l/%L Col:%c" "Кастомная графа положения курсора
+ let g:Powerline_symbols='unicode' "Поддержка unicode
+ let g:airline#extensions#xkblayout#enabled = 0 "Про это позже расскажу
+
+" COC extensions
+ source $HOME/.config/nvim/coc.vim
+ let g:coc_global_extensions = [
+     \ 'coc-pyright',
+     \ 'coc-prettier',
+     \]
+    " \ 'coc-clangd', " C/C++

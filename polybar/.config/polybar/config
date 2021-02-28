@@ -16,23 +16,21 @@
 ;
 ;==========================================================
 [colors]
-background = ${xrdb:color0:#FFFFFF}
-;background = #DD1C2023
-;background-light = #DD252d32 
+background = ${xrdb:color0:#282828}
 background-light = ${xrdb:color16:#FFFFFF}
 ;background = #F00
 
-background-alt = #3f5f85
+background-alt = ${xrdb:color16:#FFFFFF}
 ;background-alt = #95aec7 
 ;background-alt = #AE95C7
 ;foreground = ${xrdb:color7:#FFF}
-foreground = #C7CCD1
+foreground = ${xrdb:color15:#EBDBB2}
 foreground-alt = #000
-primary = ${xrdb:color17:#FFFFFF}
+primary = ${xrdb:color13:#D3869B}
 ;secondary = #e60053
-secondary = ${xrdb:color15}
+secondary = ${xrdb:color15:#EBDBB2}
 ;alert = #C7AE95
-alert = ${xrdb:color1}
+alert = ${xrdb:color1:#CC241D}
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
