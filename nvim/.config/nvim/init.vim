@@ -90,5 +90,5 @@ call plug#end()
  let g:coc_global_extensions = [
      \ 'coc-pyright',
      \ 'coc-prettier',
+     \ 'coc-clangd', 
      \]
-    " \ 'coc-clangd', " C/C++

@@ -11,11 +11,11 @@ alias neofetch='neofetch --w3m'
 alias ranger='ranger --choosedir=$HOME/.config/ranger/rangerdir; set LASTDIR (cat $HOME/.config/ranger/rangerdir); cd "$LASTDIR"'
 alias vim='nvim'
 
-set -Ux XDG_CONFIG_HOME $HOME/.config
-set -Ux XDG_CACHE_HOME $HOME/.cache
-set -Ux XDG_DATA_HOME $HOME/.local/share
-
-set -Ux INSTALL_UDEV_RULES 1
+set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx XDG_CACHE_HOME $HOME/.cache
+set -gx XDG_DATA_HOME $HOME/.local/share
+set -gx WINEPREFIX $XDG_DATA_HOME/wineprefixes/default
+set -gx INSTALL_UDEV_RULES 1
 set fish_greeting
 
 function fish_prompt
