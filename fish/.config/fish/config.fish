@@ -15,7 +15,15 @@ set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_DATA_HOME $HOME/.local/share
 set -gx WINEPREFIX $XDG_DATA_HOME/wineprefixes/default
-set -gx INSTALL_UDEV_RULES 1
+set -gx GTK_RC_FILES $XDG_CONFIG_HOME/gtk-1.0/gtkrc
+set -gx GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+set -gx CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
+set -gx LESSKEY $XDG_CONFIG_HOME/less/lesskey
+set -gx LESSHISTFILE $XDG_CACHE_HOME/less/history
+set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+set -gx ASPELL_CONF "per-conf $XDG_CONFIG_HOME/aspell/aspell.conf; personal $XDG_CONFIG_HOME/aspell/en.pws; repl $XDG_CONFIG_HOME/aspell/en.prepl"
+set -gx WGETRC $XDG_CONFIG_HOME/wgetrc
+
 set fish_greeting
 
 function fish_prompt

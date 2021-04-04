@@ -1,3 +1,4 @@
+source $HOME/.config/nvim/coc.vim
 set nocompatible              " be iMproved, required
 set ruler
 set number
@@ -23,14 +24,18 @@ au BufNewFile, BufReadPost *.py
     \ set autoindent
     \ set fileformat=unix
 " interpretator
-autocmd filetype python noremap <F5> :w <bar> exec '!python '.shellescape('%')
+" <bar>
+" autocmd filetype python noremap <F5> :exec '!python '.shellescape('%')
+autocmd filetype python noremap <F5> :w <bar> term python %
+" autocmd filetype python noremap <F5> :sp<CR> :term python %<CR> :startinsert<CR>
 
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
 
 " CPP SETTINGS
-autocmd filetype cpp noremap <F5> :w <bar> exec '!g++ '.shellescape('%') <CR> 
+autocmd filetype cpp noremap <F5> :w <bar> term g++ % <CR> 
+autocmd filetype cpp noremap <F9> :w <bar> term ./a.out <CR> 
 "autocmd filetype cpp noremap <F5> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r') <CR> 
 
 
@@ -86,7 +91,6 @@ call plug#end()
  let g:airline#extensions#xkblayout#enabled = 0 "Про это позже расскажу
 
 " COC extensions
- source $HOME/.config/nvim/coc.vim
  let g:coc_global_extensions = [
      \ 'coc-pyright',
      \ 'coc-prettier',
