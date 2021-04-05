@@ -17,7 +17,7 @@
 ;==========================================================
 [colors]
 background = ${xrdb:color0:#282828}
-background-light = ${xrdb:color16:#FFFFFF}
+background-light = ${xrdb:color17:#FFFFFF}
 ;background = #F00
 
 background-alt = ${xrdb:color16:#FFFFFF}
@@ -25,7 +25,7 @@ background-alt = ${xrdb:color16:#FFFFFF}
 ;background-alt = #AE95C7
 ;foreground = ${xrdb:color7:#FFF}
 foreground = ${xrdb:color15:#EBDBB2}
-foreground-alt = #000
+foreground-alt = #665c54
 primary = ${xrdb:color13:#D3869B}
 ;secondary = #e60053
 secondary = ${xrdb:color15:#EBDBB2}
@@ -64,16 +64,16 @@ font-2 = siji:pixelsize=10;1
 font-3 = "FontAwesome:style=Regular:size=10;1"
 font-4 = "artill clean weather icons:style=Regular:size=15;1" 
 font-5 = "Material Icons:style=Regular:size=10;1"
-modules-left = i3 
+modules-left = bspwm i3 
 modules-center = date weather 
-modules-right = alsa backlightctl battery xkeyboard wlan 
+modules-right = alsa backlightctl battery xkeyboard 
 
 tray-position = right
 tray-padding = 4
 ;tray-background = #181B20
 
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
@@ -120,19 +120,19 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused = %name%
+label-focused-background = ${colors.background-light}
+;label-focused-underline= ${colors.background-alt}
 label-focused-padding = 2
 
-label-occupied = %index%
+label-occupied = %name%
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %index%
+label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 

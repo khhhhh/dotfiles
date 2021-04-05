@@ -23,6 +23,8 @@
 ! soft contrast: *background: #32302f
 
 ! BG
+#define gbHard #1d2021
+#define gbSoft #32302f
 #define gruvboxBG #282828
 ! FG
 #define gruvboxFG #ebdbb2
@@ -124,5 +126,5 @@ URxvt.color15: gb15
 *.color13: gb13
 *.color14: gb14
 *.color15: gb15
-*.color16: gb16
-*.color17: gb17
+*.color16: gbHard
+*.color17: gbSoft

@@ -58,7 +58,7 @@ autocmd filetype tex noremap <f5> :w <CR> :VimtexCompile <CR>
 " vim-plug start
 
 call plug#begin(stdpath('data') . '/plugged')
-
+ Plug 'tpope/vim-commentary'
  Plug 'preservim/nerdtree'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'tpope/vim-fugitive'

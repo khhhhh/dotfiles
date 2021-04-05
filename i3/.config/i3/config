@@ -1,3 +1,4 @@
+# for nvidia driver
 exec xrandr --auto
 # BACKGROUND VAR
 set $bg '/home/aleh/Pictures/Wallpapers/WP/12.png'
