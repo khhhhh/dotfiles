@@ -1,6 +1,6 @@
 #! /bin/sh 
 
-wallpaper='/home/aleh/Pictures/Wallpapers/WP/12.png'
+wallpaper='$HOME/Pictures/wp.png'
 
 xrandr --auto &
 nm-applet &
