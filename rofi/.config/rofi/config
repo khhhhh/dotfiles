@@ -1,4 +1,4 @@
-rofi.lines: 3
+rofi.lines: 5
 rofi.eh: 2
 rofi.padding: 200
 rofi.bw: 0

@@ -1,12 +1,15 @@
-#! /bin/sh 
+#!/bin/sh 
 
 wallpaper="$HOME/Pictures/wp.png"
 
+sxhkd &
 xrandr --auto &
 nm-applet &
+blueman-tray &
 xrdb ~/.Xresources &
 compton --vsync opengl-swc --paint-on-overlay --config ~/.config/compton/compton.conf &
-sxhkd &
+xinput --set-prop "FocalTechPS/2 FocalTech Touchpad" "libinput Tapping Enabled" 1 &
+xinput --set-prop "FocalTechPS/2 FocalTech Touchpad" "libinput Natural Scrolling Enabled" 1 &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 bspc monitor -g 1366x768+0+0
@@ -22,13 +25,13 @@ bspc config focus_follows_pointer true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Brave-browser desktop='^1'
-bspc rule -a spotify desktop='^8'
+bspc rule -a spotify desktop='^7'
 bspc rule -a kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 bspc rule -a telegram-desktop state=floating follow=on
+
 feh --no-fehbg --bg-fill $wallpaper
-blueman-tray
 xsetroot -cursor_name left_ptr &
 pgrep bspswallow || bspswallow &
 
@@ -42,7 +45,4 @@ polybar example
 setxkbmap -model pc105 -layout pl,ru -variant qwerty -option grp:win_space_toggle
 
 # touchpad
-xinput --set-prop "FocalTechPS/2 FocalTech Touchpad" "libinput Tapping Enabled" 1
-
-xinput --set-prop "FocalTechPS/2 FocalTech Touchpad" "libinput Natural Scrolling Enabled" 1
 flameshot
