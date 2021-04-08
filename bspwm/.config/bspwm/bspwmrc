@@ -23,12 +23,10 @@ bspc config top_padding 	 24
 bspc config focus_follows_pointer true
 
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Gimp desktop='^6' state=floating follow=on
 bspc rule -a Brave-browser desktop='^1'
-bspc rule -a spotify desktop='^7'
-bspc rule -a kupfer.py focus=on
-bspc rule -a Screenkey manage=off
-
+bspc rule -a "Microsoft Teams - Preview" desktop='^7'
+bspc rule -a spotify desktop='^8'
 bspc rule -a telegram-desktop state=floating follow=on
 
 feh --no-fehbg --bg-fill $wallpaper
