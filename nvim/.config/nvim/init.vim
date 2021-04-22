@@ -95,4 +95,5 @@ call plug#end()
      \ 'coc-pyright',
      \ 'coc-prettier',
      \ 'coc-clangd', 
+     \ 'coc-texlab'
      \]

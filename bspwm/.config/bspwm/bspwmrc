@@ -6,12 +6,13 @@ sxhkd &
 xrandr --auto &
 nm-applet &
 blueman-tray &
+flameshot &
 xrdb ~/.Xresources &
 compton --vsync opengl-swc --paint-on-overlay --config ~/.config/compton/compton.conf &
 xinput --set-prop "FocalTechPS/2 FocalTech Touchpad" "libinput Tapping Enabled" 1 &
-xinput --set-prop "FocalTechPS/2 FocalTech Touchpad" "libinput Natural Scrolling Enabled" 1 &
+xinput --set-prop "FocalTechPS/2 FocalTech Touchpad" "libinput Natural Scrolling Enabled" 1 
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 bspc monitor -g 1366x768+0+0
 bspc config border_width         0
 bspc config window_gap 		 0
@@ -19,15 +20,19 @@ bspc config window_gap 		 0
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-bspc config top_padding 	 24
 bspc config focus_follows_pointer true
+bspc config top_padding 	 24
 
 
 bspc rule -a Gimp desktop='^6' state=floating follow=on
-bspc rule -a Brave-browser desktop='^1'
+bspc rule -a Brave-browser desktop='1'
 bspc rule -a "Microsoft Teams - Preview" desktop='^7'
-bspc rule -a spotify desktop='^8'
-bspc rule -a telegram-desktop state=floating follow=on
+bspc rule -a spotify desktop='8'
+bspc rule -a "TelegramDesktop" state=floating rectangle=700x600+666+24
+bspc rule -a "qtcreator" desktop='3'
+bspc rule -a "Thunar" state=floating rectangle=700x550+600+50
+bspc rule -a "Pavucontrol" state=floating rectangle=600x400+766+24
+bspc rule -a "Blueman-manager" state=floating rectangle=600x400+766+24
 
 feh --no-fehbg --bg-fill $wallpaper
 xsetroot -cursor_name left_ptr &
@@ -43,4 +48,3 @@ polybar example
 setxkbmap -model pc105 -layout pl,ru -variant qwerty -option grp:win_space_toggle
 
 # touchpad
-flameshot
