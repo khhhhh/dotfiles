@@ -18,7 +18,6 @@
 [colors]
 background = ${xrdb:color0:#282828}
 background-light = ${xrdb:color17:#FFFFFF}
-;background = #F00
 
 background-alt = ${xrdb:color16:#FFFFFF}
 ;background-alt = #95aec7 
