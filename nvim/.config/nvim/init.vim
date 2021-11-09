@@ -72,6 +72,9 @@ call plug#begin(stdpath('data') . '/plugged')
 
 call plug#end()
 
+" python venv vim
+ let g:python3_host_prog = '/usr/bin/python3.8'
+ let g:python_host_prog = '/usr/bin/python2'
  " gruvbox colorscheme
  let g:gruvbox_contrast_dark = 'medium'
  colorscheme gruvbox
@@ -81,6 +84,7 @@ call plug#end()
  let g:vimtex_quickfix_mode = 0
  let g:vimtex_view_method = 'zathura'
  let g:vimtex_view_forward_search_on_start = 0
+ let g:vimtex_compiler_progname = 'nvr'
 
 " VIM-AIRLINE
  let g:airline_theme='gruvbox'

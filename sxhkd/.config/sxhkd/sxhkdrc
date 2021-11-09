@@ -27,7 +27,7 @@ XF86MonBrightness{Down,Up}
 	brightnessctl s {5%-,5%+}
 
 XF86TouchpadToggle 
-	/home/aleh/.config/touchpad/.touchpad.sh
+	~/.config/touchpad/./touchpad.sh
 
 # program launcher
 super + d
