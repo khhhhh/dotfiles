@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# sudo not required for some system commands
+for command in mount umount apt su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+alias \
+	ll='ls -alF' \
+	la='ls -A' \
+	l='ls -CF' \
+	vimrc='nvim ~/.config/nvim/init.vim' \
+	vimbash='nvim ~/.bashrc' \
+	vimi3='nvim ~/.config/i3/config' \
+	#alias neofetch='neofetch --w3m' \
+	ranger='ranger --choosedir=$HOME/.config/ranger/rangerdir; set LASTDIR (cat $HOME/.config/ranger/rangerdir); cd "$LASTDIR"' \
+	n='nnn'
+
+alias \ 
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
