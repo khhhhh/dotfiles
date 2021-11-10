@@ -13,14 +13,11 @@ alias \
 	la='ls -A' \
 	l='ls -CF' \
 	vimrc='nvim ~/.config/nvim/init.vim' \
-	vimbash='nvim ~/.bashrc' \
-	vimi3='nvim ~/.config/i3/config' \
+	vimzsh='nvim ~/.config/zsh/.zshrc' \
 	#alias neofetch='neofetch --w3m' \
 	ranger='ranger --choosedir=$HOME/.config/ranger/rangerdir; set LASTDIR (cat $HOME/.config/ranger/rangerdir); cd "$LASTDIR"' \
+	ls='ls -hN --color=auto --group-directories-first' \
+	grep='grep --color=auto' \
+	diff='diff --color=auto' \
+	ccat='highlight --out-format=ansi'
 	n='nnn'
-
-alias \ 
-	ls="ls -hN --color=auto --group-directories-first" \
-	grep="grep --color=auto" \
-	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi"
